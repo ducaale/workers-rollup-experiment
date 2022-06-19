@@ -4,7 +4,7 @@ import workerString from "../dist/worker.js"
 
 export default async function init() {
   let worker, obj;
-  if (typeof process !== 'undefined' && process?.versions?.node) {
+  if (typeof process !== "undefined" && process?.versions?.node) {
     const { Worker } = await import("worker_threads");
     worker = new Worker(workerString, {eval: true});
     obj = Comlink.wrap(nodeEndpoint(worker));

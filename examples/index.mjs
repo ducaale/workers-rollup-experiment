@@ -1,3 +1,3 @@
-import init from '../dist/main.mjs';
+import init from "../dist/main.mjs";
 
 init()

@@ -16,7 +16,7 @@ export default [
   },
   {
     input: "src/main.mjs",
-    output: { file: 'dist/main.mjs', format: "esm" },
+    output: { file: "dist/main.mjs", format: "esm" },
     plugins: [nodeResolve()]
   }
 ]

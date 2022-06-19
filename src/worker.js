@@ -8,7 +8,7 @@ const obj = {
   },
 };
 
-if (typeof process !== 'undefined' && process?.versions?.node) {
+if (typeof process !== "undefined" && process?.versions?.node) {
   const { parentPort } = require("worker_threads");
   Comlink.expose(obj, nodeEndpoint(parentPort));
 } else {
