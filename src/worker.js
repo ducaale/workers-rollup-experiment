@@ -8,7 +8,10 @@ const obj = {
     this.wasmPath = path
   },
   answerToLifeTheUniverseAndEverything() {
-    return wasmModule({ locateFile: (path, prefix) => this.wasmPath })
+    return wasmModule({
+      locateFile: (path, prefix) => this.wasmPath,
+      printProgress: () => console.log("crunching numbers...")
+    })
       .then((module) =>
         module._answer_to_life_the_universe_and_everything()
     )
