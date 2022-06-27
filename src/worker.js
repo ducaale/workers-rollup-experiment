@@ -1,11 +1,18 @@
-import * as Comlink from "comlink"
+import * as Comlink from "comlink";
 import nodeEndpoint from "comlink/dist/esm/node-adapter";
+import wasmModule from "../native/a.out";
 
 const obj = {
-  counter: 0,
-  inc() {
-    this.counter++;
+  wasmPath: undefined,
+  setWasmPath(path) {
+    this.wasmPath = path
   },
+  answerToLifeTheUniverseAndEverything() {
+    return wasmModule({ locateFile: (path, prefix) => this.wasmPath })
+      .then((module) =>
+        module._answer_to_life_the_universe_and_everything()
+    )
+  }
 };
 
 if (typeof process !== "undefined" && process?.versions?.node) {

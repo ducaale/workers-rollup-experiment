@@ -1,2 +1,4 @@
 dist
 node_modules
+a.out.js
+a.out.wasm

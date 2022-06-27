@@ -9,5 +9,15 @@ node's worker-threads and web-workers.
 
 ## Running the examples
 
+First, make sure to [install emscripten](https://emscripten.org/docs/getting_started/downloads.html)
+and then build the project:
+
+```
+npm install
+npm run build
+```
+
+Once that is done, you can run the project in either Node or the Browser:
+
 * Node: `npm run start:node`
 * Web: `npm run start:web` and navigate to http://127.0.0.1:8080/examples/

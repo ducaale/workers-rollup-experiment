@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "rollup -c",
+    "build:native": "cd native && sh ./build.sh",
+    "build:js": "rollup -c",
+    "build": "npm run build:native && npm run build:js",
     "start:web": "http-server -c0 .",
     "start:node": "node examples/index.mjs"
   },

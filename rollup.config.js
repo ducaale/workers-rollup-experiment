@@ -10,7 +10,7 @@ export default [
       terser({ warnings: true, mangle: { module: true } }),
       {
         name: "worker-to-string",
-        renderChunk: code => `export default '${code}';`
+        renderChunk: (code) => `export default '${code.replace(/'/g, "\\'")}';`
       }
     ]
   },
