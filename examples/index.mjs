@@ -1,3 +1,3 @@
-import init from "../dist/main.mjs";
+import run from "../dist/main.mjs";
 
-init()
+run()

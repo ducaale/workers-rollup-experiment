@@ -19,7 +19,7 @@ export default async function run() {
   }
 
   await obj.setWasmPath(wasmPath);
-  const answer = await obj.answerToLifeTheUniverseAndEverything(wasmPath);
+  const answer = await obj.answerToLifeTheUniverseAndEverything();
   console.log(answer);
   
   worker.terminate();
