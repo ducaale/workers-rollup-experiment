@@ -1,4 +1,4 @@
-# Workers + Rollup Experiment
+# Workers + WASM + Rollup Experiment
 
 Is it possible to use worker in a library that targets both browsers and node? This repo
 is a proof of concept of how that could be done.
