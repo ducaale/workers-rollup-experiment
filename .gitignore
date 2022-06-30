@@ -1,4 +1,4 @@
 dist
 node_modules
-a.out.js
-a.out.wasm
+native-module.js
+native-module.wasm

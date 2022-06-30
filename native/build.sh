@@ -11,4 +11,3 @@ em++ -O3 native-module.cpp \
 
 mkdir -p ../dist
 mv native-module.js native-module.wasm ../dist
-
