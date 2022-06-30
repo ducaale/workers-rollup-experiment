@@ -8,9 +8,5 @@ em++ -O3 main.cpp \
   -s MODULARIZE=1 \
   -s EXPORT_ES6=1
 
-# Not sure why but rollup can't properly stringify the content of a.out.js
-# without removing this bit.
-perl -pi -e 's|if\(process\["argv"\].length>1\){.*?}||' a.out.js
-
 mkdir -p ../dist
 mv a.out.wasm ../dist
