@@ -4,7 +4,7 @@ import { terser } from "rollup-plugin-terser";
 export default [
   {
     input: "src/worker.js",
-    output: { dir: "dist", format: "umd" },
+    output: { file: "dist/worker.js", format: "umd" },
     plugins: [
       nodeResolve(),
       terser({ warnings: true, mangle: { module: true } }),

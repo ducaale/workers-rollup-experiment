@@ -1,6 +1,6 @@
 import * as Comlink from "comlink";
 import nodeEndpoint from "comlink/dist/esm/node-adapter";
-import wasmModule from "../native/a.out";
+import wasmModule from "../dist/native-module.js";
 
 const obj = {
   wasmPath: undefined,

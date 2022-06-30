@@ -2,10 +2,11 @@ import * as Comlink from "comlink";
 import nodeEndpoint from "comlink/dist/esm/node-adapter";
 import workerString from "../dist/worker.js"
 
+// TODO: check https://github.com/rollup/rollup/pull/2785
+let wasmPath = new URL("native-module.wasm", import.meta.url).toString();
+
 export default async function run() {
   let worker, obj;
-  // TODO: check https://github.com/rollup/rollup/pull/2785
-  let wasmPath = new URL("a.out.wasm", import.meta.url).toString();
   if (typeof process !== "undefined" && process?.versions?.node) {
     const { Worker } = await import("worker_threads");
     const { fileURLToPath } = await import("url");
